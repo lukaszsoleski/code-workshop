@@ -1,0 +1,36 @@
+﻿<Window x:Class="MVVMdemo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MVVMdemo"
+        xmlns:mw="clr-namespace:MVVMdemo.ViewModels"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+
+    <Window.DataContext>
+        <mw:PrizesViewModel/>
+    </Window.DataContext  >
+    
+    <Window.Resources>
+    <local:BoolToBrushConverter x:Key="boolToBrush"/>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="25" Foreground="Navy" Grid.Row="0" Margin="10,10,10,10"> 
+<Run Foreground="Black" FontFamily="Courier New"
+Text="{Binding Path=Sum, Mode=OneWay}" />
+        </TextBlock>
+        <TextBox x:Name="tbKwota" FontSize="30" FontFamily="Courier New"
+TextAlignment="Right" Margin="10,10,10,10" Grid.Row="1" Text="0" 
+       Foreground="{Binding ElementName=btnDodaj, Path=IsEnabled , Mode=OneWay, Converter={StaticResource boolToBrush} }" />
+        <Button x:Name="btnDodaj" Content="Add" FontSize="20" Margin="10,10,10,10"
+Grid.Row="2" Command="{Binding AddPrice}"
+CommandParameter="{Binding ElementName=tbKwota, Path=Text}" />
+    </Grid>
+</Window>
+

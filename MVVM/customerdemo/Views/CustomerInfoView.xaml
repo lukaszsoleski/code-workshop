@@ -1,0 +1,14 @@
+﻿<Window x:Class="MVVMDemos1.Views.CustomerInfoView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MVVMDemos1.Views"
+        mc:Ignorable="d"
+        Title="CustomerInfoView" Height="213" Width="447">
+    <DockPanel LastChildFill="True">
+        <Label DockPanel.Dock="Top" FontSize="48" FontFamily="Mistral" Foreground="#696969" Content="Saved!"/>
+        <Rectangle DockPanel.Dock="Bottom" Height="64" Fill="#ECECEC"/>
+        <Label DockPanel.Dock="Top" Content="{Binding Info, FallbackValue='Your data was updated' }" VerticalAlignment="Bottom"/>
+    </DockPanel>
+</Window>
