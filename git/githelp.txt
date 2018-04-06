@@ -1,0 +1,31 @@
+mkdir name
+cd name 
+cd ..  	;moves backwards
+cd - 	;moves to last location
+touch app.js 	;creates file app.js
+
+git init
+
+git config --global user.name 'Your Name' 
+git config --global user.email 'email@example.com'
+git config --list
+git add index.html ;add file contents to the index
+git status ; 
+
+git rm --cached index.html 
+rm 	remove files from the working tree and from the index
+--cached 	remove path from index
+
+git add .
+git add *.txt
+
+git commit 	Record changes to the repository 
+git commit -m 'Another commit' 
+
+git checkout	Switch branches or restore working tree
+git merge	Join two or more development histories together
+git push	Update remote refs along with associated objects
+
+touch .gitignore	edit to exclude files that aren't to be tacked
+
+esc, :wq 	exit editor
