@@ -1,2 +1,0 @@
-# StaticReferenceTest
-static memory test

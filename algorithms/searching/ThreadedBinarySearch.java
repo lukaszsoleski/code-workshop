@@ -61,9 +61,9 @@ public class ThreadedBinarySearch implements Runnable {
 			if(carryOn){ // value shared to all threads.
 				// If one of the threads sets this value to false, all will end their work
 				pivot = ((higherIndex - lowerIndex)/2)+lowerIndex; // set pivot element
-				if(table[pivot]==key){ // If pivot value is equal key than end work. Element was found.
+				if(table[pivot]==key){ // If pivot value equals to key end work. Element was found.
 					found = true; // prevents further working
-					carryOn = false; // sets a variable that controls the work of thread work.
+					carryOn = false; // sets a variable that controls thread work.
 				}
 				if(!found) 
 				{
@@ -76,7 +76,7 @@ public class ThreadedBinarySearch implements Runnable {
 	}
 	/**
 	 * <h4> Get Index Found </h4>
-	 * @return <p> Index of specified value. If the value wasn't found then returns <i>-1</i>. </p>
+	 * @return <p> Index of specified value. If the value wasn't found returns <i>-1</i>. </p>
 	 * 
 	 */
 	public int getIndexFound() {
