@@ -18,8 +18,8 @@ int main()
 	l = r = (col / 2); 
 	while (i <= row)
 	{
-		for (int j = 1; j <= col; j++) {
-			if (j < l || j > r)
+		for (int j = 1; j <= r; j++) {
+				if (j < l)
 				cout << " ";
 			else
 				cout << "*";
