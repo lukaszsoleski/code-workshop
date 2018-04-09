@@ -19,7 +19,7 @@ int main()
 	while (i <= row)
 	{
 		for (int j = 1; j <= r; j++) {
-				if (j < l)
+			if (j < l)
 				cout << " ";
 			else
 				cout << "*";
