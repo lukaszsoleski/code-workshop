@@ -1,1 +1,1 @@
-![screenshot](master/img/Capture.png)
+![screenshot](web-page-templates/landing-page/img/Capture.png)
