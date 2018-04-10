@@ -29,3 +29,44 @@ git push	Update remote refs along with associated objects
 touch .gitignore	edit to exclude files that aren't to be tacked
 
 esc, :wq 	exit editor
+
+git init 
+git init [repository]
+git clone
+
+git status 
+
+git add [file name]
+git add .
+git add --all
+
+git add -A stages All
+git add . stages new and modified, without deleted
+git add -u stages modified and deleted, without new
+
+git commit 
+git commit -m '[commit message]'
+clear
+
+git branch \\ list all branches
+git branch [branch name] \\ create branch
+git checkout [branch name] \\swap to another branch
+git branch [branch name] -d \\delete branch 
+git checkout -b [name] \\ creates new branch
+
+git merge [branch name] \\ git merge master
+			\\ checkout master
+			\\ git merge dev
+
+
+
+
+
+
+
+
+
+
+
+
+
