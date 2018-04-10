@@ -1,1 +1,1 @@
-![screenshot](https://github.com/lukaszsoleski/web-page-templates/blob/master/Responsive%20Bootstrap%201/Capture.PNG?raw=true)
+![screenshot](https://github.com/lukaszsoleski/web-page-templates/blob/master/Responsive%20Bootstrap/Capture.PNG?raw=true)

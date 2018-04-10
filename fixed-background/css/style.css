@@ -33,7 +33,8 @@ body,html{
     min-height: 400px;
 }
 .section{
-    text-align: center;
+    text-align: justify;
+    text-justify: inter-word;
     padding: 50px 80px;
 }
 .section-light{
@@ -75,13 +76,19 @@ body,html{
     .ptext{
         font-size: 1.2em;
     }
+    .section{ 
+        padding: 25px 40px;
+    }
 
 }
 @media(max-width: 576px){
     html,body{
-        font-size: 12px;
+        font-size: 10px;
     }
     .ptext{
         font-size: 1.2em;
+    }
+    .section{
+        padding: 15px 20px;
     }
 }
