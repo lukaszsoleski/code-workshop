@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        padding: 0;
+        background:#0b0b0b;
+    }
+    .container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    li{
+        display: inline-block;
+
+    }
+    li a {
+        text-decoration: none;
+        cursor: pointer;
+        display: inline-block;
+        color: #fff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: lighter;
+        font-size: 1.4em;
+        padding: 0 10px;
+    }
+    .underline-on-hover::after{
+        content: '';
+        display: block; /*next line*/
+        width: 0;
+        height: 2px;
+        background: #fff;
+        transition: width .3s;
+    }
+    .underline-on-hover:hover::after
+    {
+        width: 100%;
+        transition: width .3s;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <li><a href="#" class="underline-on-hover">Home</a></li>
+        <li><a href="#" class="underline-on-hover">About</a></li>
+        <li><a href="#" class="underline-on-hover">Contact</a></li>
+        <li><a href="#" class="underline-on-hover">FAQ</a></li>
+    </div>
+</body>
+</html>
