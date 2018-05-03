@@ -58,9 +58,7 @@ git status
 git push -u origin homepage
 
 
-
-
-
+git reset --hard HEAD 
 
 
 
