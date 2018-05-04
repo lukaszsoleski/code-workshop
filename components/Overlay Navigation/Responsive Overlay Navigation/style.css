@@ -64,7 +64,7 @@ nav #brand a {
 }
 /*
 nav #brand a:hower{
-      /*later*/
+      
 } */
 
 nav .menu {
@@ -85,7 +85,7 @@ nav .menu li a {
 }
 
 #toggle {
-	  position: absolute;
+	  position: fixed;
 	  right:10vw;
 	  top:0.5em;
       
@@ -121,7 +121,7 @@ nav .menu li a {
 
 #resize {
       z-index: 1;
-      position: absolute;
+      position: fixed;
 	  top: 0px;
       background: #000;
       width: 100%;
@@ -157,9 +157,9 @@ nav .menu li a {
       color: #fff;
 }
 
-#resize.active {
+#resize.active { /*           ACTIVE            */
       visibility: visible;
-      opacity: 0.99;
+      opacity: 0.8;
 }
 
 
