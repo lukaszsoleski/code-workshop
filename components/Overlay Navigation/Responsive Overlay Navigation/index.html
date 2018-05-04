@@ -6,36 +6,35 @@
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>Smooth Fade-Up Responsive Navigation</title>
       <link rel="stylesheet" href="style.css">
-      <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
       <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,700,900" rel="stylesheet">
 </head>
 <body>
-
+      
       <nav>
             <span id="brand">
                   <a href="index.html">Brand</a>
             </span>
-
+            
             <ul class="menu">
-                  <li><a href="#home">Home</a></li>
-                  <li><a href="#about">About</a></li>
-                  <li><a href="#contact">Contact</a></li>
-                  <li><a href="#home">FAQ</a></li>
+                  <li class="underline-on-hover"><a href="#home" >Home</a></li>
+                  <li class="underline-on-hover"><a href="#about" >About</a></li>
+                  <li class="underline-on-hover"><a href="#contact">Contact</a></li>
+                  <li class="underline-on-hover"><a href="#home" >FAQ</a></li>
             </ul>
-
+            
             <div id="toggle">
                   <div class="span" id="one"></div>
                   <div class="span" id="two"></div>
                   <div class="span" id="three"></div>
             </div>
       </nav>
-
+      
       <div id="resize">
             <ul class="menu">
-                  <li><a href="#home">Home</a></li>
-                  <li><a href="#about">About</a></li>
-                  <li><a href="#contact">Contact</a></li>
-                  <li><a href="#home">FAQ</a></li>
+                  <li class="underline-on-hover"><a href="#home">Home</a></li>
+                  <li class="underline-on-hover"><a href="#about">About</a></li>
+                  <li class="underline-on-hover"><a href="#contact">Contact</a></li>
+                  <li class="underline-on-hover"><a href="#home">FAQ</a></li>
             </ul>
       </div>
       <div class="showcase" id="home">
@@ -47,37 +46,38 @@
             <div class="content"> 
                   <h1>Welcome</h1>
                   <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione, amet cupiditate quasi animi quibusdam voluptatem veniam doloribus ipsa iure quas officiis sed possimus dignissimos! Fugiat impedit vitae minus temporibus totam.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione, amet cupiditate quasi animi quibusdam voluptatem veniam doloribus ipsa iure quas officiis sed possimus dignissimos! Fugiat impedit vitae minus temporibus totam.
                   </p>
             </div>
       </div>
-
+      
       <div class="showcase" id="contact">
             <div class="content"> 
                   <h1>Find Us</h1>
                   <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione, amet cupiditate quasi animi quibusdam voluptatem veniam doloribus ipsa iure quas officiis sed possimus dignissimos! Fugiat impedit vitae minus temporibus totam.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione, amet cupiditate quasi animi quibusdam voluptatem veniam doloribus ipsa iure quas officiis sed possimus dignissimos! Fugiat impedit vitae minus temporibus totam.
                   </p>
             </div>
       </div>
+      <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
       <script>
-
+            
       $("#toggle").click(function() {
-
+            
       $(this).toggleClass("on");
       $("#resize").toggleClass("active");
-
-      });
+      
+});
 
       $("#resize li").click(function(){
             $("#toggle").removeClass("on");
             $("#resize").removeClass("active");
       });
-
-
-
-
+      
+      
+      
+      
       </script>
-
+      <script src="scrolling.js"></script>
 </body>
 </html>

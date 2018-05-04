@@ -21,7 +21,9 @@ body {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      padding: 0 1.2em;
+      width: 95%;
+      padding: 0 1.6em;
+      text-align: center;
 }
 
 .content h1 {
@@ -34,10 +36,10 @@ body {
       font-size: 1.6em;
       font-weight: 200;
 }
+
 nav {
       width: 100%;
-      background: #000;
-      opacity: 0.5;
+      background: rgba(0,0,0,.5);
       height: 3em;
       position: fixed;
       z-index: 1;
@@ -45,8 +47,8 @@ nav {
       flex-direction: row;/*default*/
       flex-wrap: nowrap;/*default*/
       justify-content: space-evenly;
-	  align-items:center;
-	  z-index: 999;
+	align-items:center;
+	z-index: 999;
 }
 
 
@@ -62,14 +64,21 @@ nav #brand a {
       transition: all 0.3s ease-out;
       font-weight: 300;
 }
-/*
-nav #brand a:hower{
-      
-} */
 
-nav .menu {
-	/*deleted floats*/
-}
+
+.underline-on-hover::after{
+      content: '';
+      display: block; /*next line*/
+      width: 0;
+      height: 2px;
+      background: #fff;
+      transition: width .3s;
+  }
+  .underline-on-hover:hover::after
+  {
+      width: 100%;
+      transition: width .3s;
+  }
 
 nav .menu li {
       display: inline-block;
@@ -77,6 +86,7 @@ nav .menu li {
       cursor: pointer;
       transition: all 0.3s ease-out;
 }
+
 
 nav .menu li a {
       color: #fff;
@@ -129,35 +139,29 @@ nav .menu li a {
       visibility: hidden;
       opacity: 0;
       transition: all 1s ease-out;
-      display: table;
-}
-
-#resize .menu {
-      height: 90px;
-      display: table-cell;
-      vertical-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
 }
 
 #resize .menu li {
       display: block;
-      text-align: center;
       padding: 20px 0;
-      font-size: 50px;
-      min-height: 50px;
-      font-weight: bold;
+      line-height: 1.6em;
+      font-size: 1.6em;
+      font-weight: 200;
       cursor: pointer;
       transition: all 0.3s ease-out;
 }
 
-#resize li:nth-child(1) {
-      margin-top:140px;
-}
-
 #resize .menu li a {
       color: #fff;
+    
 }
 
-#resize.active { /*           ACTIVE            */
+#resize.active { 
       visibility: visible;
       opacity: 0.8;
 }
@@ -171,15 +175,8 @@ nav .menu li a {
       }
 
       nav #brand {
-            margin-left: 18px;
-			position:absolute;
-			left:10vw;
-      }
-
-      .menu a {
-            font-family: "Poppins";
-            font-weight: 200;
-            font-size: 20px;
+		position:fixed;
+		left:10vw;
       }
 
       nav .menu {
