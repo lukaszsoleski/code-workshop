@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gradient transition animation</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat');
+    /* background-position:  the first value is the horizontal position, second value is the vertical position */
+    *{
+        padding: 0;
+        margin: 0;
+        font-family: 'Montserrat', sans-serif;
+    }
+    .showcase{
+        height: 100vh;
+        padding: 0 15px;
+        
+    }
+    .showcase h1{
+        color:#fff;
+        font-weight: 300;
+        font-size: 2em;
+        position:absolute;
+        top:40%;
+        left: 0%;
+        right: 0%;
+        text-align: center;
+        
+    }
+    .bg-grad{
+        /* https://uigradients.com/ */
+        background: #C33764;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(45deg, #1D2671, #C33764);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(45deg, #1D2671, #C33764); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */}
+
+    .bg-grad-animated{
+    background-size: 400% 400%;
+    -webkit-animation: bg-gradient-animation 30s ease infinite;
+    -moz-animation: bg-gradient-animation 30s ease infinite;
+    -o-animation: bg-gradient-animation 30s ease infinite;
+    animation: bg-gradient-animation 30s ease infinite;
+    }
+
+@-webkit-keyframes bg-gradient-animation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes bg-gradient-animation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-o-keyframes bg-gradient-animation {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes bg-gradient-animation { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+</style>
+<body>
+    <div class="showcase bg-grad bg-grad-animated">
+        <h1>Gradient Animated Background</h1>
+    </div>
+    
+</body>
+</html>

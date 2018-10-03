@@ -1,0 +1,1 @@
+![screenshot](https://github.com/lukaszsoleski/web-page-templates/blob/master/fixed-background/img/Capture.PNG?raw=true)
