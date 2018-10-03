@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    
+    <script>
+   var number = Math.floor(Math.random()*3)+1;
+
+   function slide(){
+      
+       number++; 
+       if (number > 3) number = 1; 
+       //let img = "<img src=\"img/" + number + ".jpg\"/>";
+       // document.getElementById("slider").innerHTML = img; 
+        let el = document.getElementById("slider");
+        let urlString = 'url(img/' + number + '.jpg)';
+        document.getElementById('slider').style.backgroundImage = urlString;
+      
+       setTimeout(() => {
+          slide(); 
+       }, 4000);
+    
+
+    }
+    
+    </script>
+    
+    <style>
+    *{
+        margin:0; 
+        padding: 0; 
+    }
+    html,body{
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        background-color: black;
+    }
+    #slider {
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .container{
+        padding: 10px;
+        margin: 0 5px;
+        background: whitesmoke;
+        opacity: 0.5;
+        border-radius:15px; 
+
+    }
+   
+    </style>
+</head>
+    <body onload="slide()">
+  
+
+    <div id="slider">
+        <div class="container">
+        <h1>Welcome!</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam voluptas possimus, eius aperiam dolore pariatur!
+        </p>
+         </div>
+    </div>
+
+
+
+    </body>
+</html>
