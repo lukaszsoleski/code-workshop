@@ -71,7 +71,16 @@ git diff --staged #If you want to see what you’ve staged that will go into your 
 git commit -a -m 'added new benchmarks'  #-a flag includes all changed files and skips staging process.
 
 
+git rm [file name] -remove file
 
+git rm -f [file name] force to remove from staging area
+
+git rm --cashed [file] #This is particularly useful if you forgot to add something to your .gitignore file and accidentally 
+                       #staged it, like a large log file or a bunch of .a compiled files. To do this, use the --cached
+git rm log/\*.log #This command removes all files that have the .log extension in the log/ directory. 
+
+
+git mv file_from file_to #rename implicitly
 
 
 
