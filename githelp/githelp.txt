@@ -36,11 +36,13 @@ git branch \\ list all branches
 git branch [branch name] \\ create branch
 git checkout [branch name] \\swap to another branch
 git branch [branch name] -d \\delete branch 
-git checkout -b [name] \\ creates new branch
+git checkout -b [name] \\ create new branch and checkout it
 
+// in dev: 
 git merge [branch name] \\ git merge master
-			\\ checkout master
-			\\ git merge dev
+// checkout to master
+git checkout master
+git merge dev // merge dev branch 
 
 2#
 
@@ -55,12 +57,16 @@ touch .gitignore
 git add . 
 git commit -m ''
 git status
-git push -u origin homepage
+git push -u origin homepage # push local branch to remote repository 
 
 
 git reset --hard HEAD 
 
+git diff #That command compares what is in your working directory with what is in your staging area
+git diff --staged #If you want to see what you’ve staged that will go into your next commit, you can use git diff --staged. 
+#This command compares your staged changes to your last commit
 
+git commit -a -m 'added new benchmarks'  #-a flag includes all changed files and skips staging process.
 
 
 
