@@ -82,5 +82,39 @@ git rm log/\*.log #This command removes all files that have the .log extension i
 
 git mv file_from file_to #rename implicitly
 
+#VIEWING THE COMMIT HISTORY
+
+git log #show history
+
+git log -p or --patch shows the diffrence introduced in each commit. limit the number of log entries displayed using -2 or any number
+git log -p -2
+git log -stat
+
+#prints commit history: 
+git log --pretty=oneline
+git log --pretty=short
+git log --pretty=full
+git log --pretty=fuller
+git log --format:"custom formating"
+git log --graph #shows branch merging history
+git log --since=2.weeks [days , minutes, hours, years]
+
+
+#UNDOING THINGS
+
+git commit --amend # undo last commit and go back to staging area. 
+git reset HEAD [file name] #unstage file
+git checkout --[file name] #discard any changes(before staging). WARNING! this is one way process. 
+# Any changes made after commit to this file will be gone. Git override this file with content from last commit. 
+# another way is to use stashing and branching.
+#REMEMBER : anythink that is committed in Git can almost always be recovered. Even commits that were overwritten can be recovered. 
+
+
+#WORKING WITH REMOTES :
+
+
+
+
+
 
 
