@@ -1,0 +1,41 @@
+You are given tow tables: movies and reservations, with the following structure:
+
+create table movies(
+    id integer not null,
+    title varchar(40) not null,
+    director varchar(40) not null,
+    unique(id)
+);
+create table reservations (
+    id integer not null,
+    movie_id integer not null,
+    number_of_tickets integer not null, 
+    cinema varchar(40) not null, 
+    unique(id)
+);
+
+You would like to compute the total number of tickets sold for each movie. Then you would like to rank all movies by popularity. Write an SQL query taht return a popularity ranking of all movies described in any row of the table movies. For each movie you should provide its id and title and the total number of tickets sold for it (sold_tickets). The table should be ordered by its sold_tickets column (in decreasing order). In case of a tie, order the rows by the id column (in decreasing order). In case of a tie , order the rows by the id column (in increasing order) 
+
+
+Code to populate database: 
+
+insert into movies(id,title,director) values(30,'Ducks','Donald');
+insert into movies(id,title,director) values(40,'We test coders','Codility');
+insert into movies(id,title,director) values(50, 'Thr3e','Davut Rechnif');
+
+insert into reservations(id,movie_id,number_of_tickets,cinema) 
+values(1,30,30,'Cineduck');
+
+insert into reservations(id,movie_id,number_of_tickets,cinema) 
+values(2,50,3,'Threenema');
+
+insert into reservations(id,movie_id,number_of_tickets,cinema) 
+values(3,30,1,'Threenema');
+insert into reservations(id,movie_id,number_of_tickets,cinema) 
+values(4,40,17,'Cinammon');
+insert into reservations(id,movie_id,number_of_tickets,cinema) 
+values(5,30,8,'Cineduck');
+insert into reservations(id,movie_id,number_of_tickets,cinema) 
+values(6,40,25,'Threenema');
+insert into reservations(id,movie_id,number_of_tickets,cinema) 
+values(7,30,11,'See Nema');
