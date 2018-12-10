@@ -1,0 +1,9 @@
+Install UltraUXThemePatcher
+
+Install OldNewExplorer
+
+Copy all file in folder that contains the .theme files into "C:\Windows\Resources\Themes"
+
+Find more themes at
+https://www.deviantart.com/customization/skins/windows/win10/newest/
+http://www.cleodesktop.com/search/label/Theme%20Win10
