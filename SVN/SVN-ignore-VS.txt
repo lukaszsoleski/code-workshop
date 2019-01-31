@@ -1,0 +1,1 @@
+\*lib vs *\vs .git target* *\bin *\bin\* *\obj *\obj\* *.suo *.user *.bak *.ReSharper** **\_ReSharper.** **\StyleCop.Cache **\*.dotCover *.releaseBackup release.properties *.versionsBackup *.diff *.vssscc *.vspscc *.scc
