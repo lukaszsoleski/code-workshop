@@ -1,1 +1,1 @@
-\*lib vs *\vs .git target* *\bin *\bin\* *\obj *\obj\* *.suo *.user *.bak *.ReSharper** **\_ReSharper.** **\StyleCop.Cache **\*.dotCover *.releaseBackup release.properties *.versionsBackup *.diff *.vssscc *.vspscc *.scc
+*/bin */obj */Release */Debug *.suo *.err *.log *.obj *.bin *.dll *.exe *.LOG *.user *.pdb [tT]emp [tT]empPE Ankh.Load thumbs.db *.resharper *.vspscc *.vsssccc *.scc */_ReSharper* */_ReSharper.* bin obj *.resharperoptions *.db *.bak *_ReSharper* *.snk logs output *.crunchsolution.* *.crunchproject.*
