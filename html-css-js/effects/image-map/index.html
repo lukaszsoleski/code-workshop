@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
+</head>
+<body>
+    <img src="https://cdn-images-1.medium.com/max/1600/0*H8odJZNPmo13lEJ2" usemap="#image-map" class="map">
+<map name="image-map">
+    <area target="" alt="" title="" href="" coords="421,528,383,596,424,672,416,828,455,850,486,836,548,726,613,610,581,583,544,568,461,508" shape="poly">
+</map>
+<script>
+    $.fn.maphilight.defaults = {
+	fill: true,
+	fillColor: '67C7ED',
+	fillOpacity: 0.3,
+	stroke: true,
+	strokeColor: '67C7ED',
+	strokeOpacity: 0.9,
+	strokeWidth: 2,
+	fade: true,
+	alwaysOn: false,
+	neverOn: false,
+	groupBy: false,
+	wrapClass: true,
+	shadow: true,
+	shadowX: 0,
+	shadowY: 0,
+	shadowRadius: 6,
+	shadowColor: '000000',
+	shadowOpacity: 0.8,
+	shadowPosition: 'outside',
+	shadowFrom: false
+}
+$(function() {
+    $('.map').maphilight();
+});
+</script>
+</body>
+</html>
