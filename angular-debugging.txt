@@ -1,0 +1,7 @@
+#environment: TypeScript + EsLint + VScode Angular Extension Pack
+#breakpoint statement: debugger; - that will pop class code in the chrome debugger.
+	 Next add variable to watch and most the important.. set black theme so u're actually hacking stuff. goto options theme light/black.
+
+
+#json pipe eg: *ngFor item .. {{item | json}}     // this will print this object to the browser
+ 
