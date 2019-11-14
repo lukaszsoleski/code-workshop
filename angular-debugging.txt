@@ -1,7 +1,37 @@
 #environment: TypeScript + EsLint + VScode Angular Extension Pack
-#breakpoint statement: debugger; - that will pop class code in the chrome debugger.
+#breakpoint statement: debugger; - that will pop class code in the browser debugger.
 	 Next add variable to watch and most the important.. set black theme so u're actually hacking stuff. goto options theme light/black.
 
 
-#json pipe eg: *ngFor item .. {{item | json}}     // this will print this object to the browser
+#json pipe eg: *ngFor item .. {{item | json}}     // this will print this object as a raw json string
  
+
+.vscode debugger config file: (default Angular project ports)
+1. Install Chrome debugger extension
+2. Generate launch.json
+3. Edit using the following code *1)
+4. Run: ng serve
+5. Run debugger by clicking "Launch Chrome against localhost"
+*1)
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:4200",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+          "type": "chrome",
+          "request": "attach",
+          "name": "Attach to Chrome",
+          "port": 4200,
+          "webRoot": "${workspaceFolder}"
+      }
+    ]
+}
