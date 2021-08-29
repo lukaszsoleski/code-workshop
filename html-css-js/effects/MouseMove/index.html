@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html, body{
+        padding: 0;
+        margin: 0;
+    }
+    .page-container{
+        width: 100%;
+        height: 100vh;
+        position:  absolute;
+        background-color: #fff;
+        overflow: hidden;
+    }
+    .page-back{
+        position: absolute;
+        width: 120%;
+        height: 120vh;
+        left: -10%;
+        top: -10%;
+
+        background-image: url(hero.jpg);
+        background-size: cover;
+        background-position: center;
+        filter: blur(3px);
+        -webkit-filter: blur(3px);
+
+    }
+
+</style>
+<body>
+
+    <div class="page-container">
+        <div class="page-back">
+
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        
+        window.onload = () => {
+            let windowWidth = window.innerWidth;
+
+            let container = document.getElementsByClassName('page-container')[0]
+            console.log(container)
+            console.log(window.innerWidth)
+            console.log(window.innerHeight)
+              container.addEventListener('mousemove', (event) => {
+                let moveX = ((window.innerWidth / 2) - event.pageX ) * 0.1; 
+                let moveY = ((window.innerHeight / 2) - event.pageY ) * 0.1; 
+                
+
+                let pageBack = document.getElementsByClassName('page-back')[0];
+
+                pageBack.style.marginLeft = moveX + 'px'
+                pageBack.style.marginTop = moveY + 'px'
+            })
+
+        }
+       
+
+
+    </script>
+</body>
+</html>
