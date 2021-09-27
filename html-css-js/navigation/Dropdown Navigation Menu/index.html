@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+</head>
+<style>
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100vh;
+        font-family: 'Yaldevi', sans-serif;
+    }
+
+    .hero-section {
+        width: 100%;
+        height: 100vh;
+    }
+
+    h1 {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: lighter;
+        text-align: center;
+        letter-spacing: 1em;
+        line-height: 3em;
+    }
+
+    .menu-btn {
+        position: fixed;
+        margin: 1em;
+        font-size: 24px;
+    }
+
+    .menu {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background: #121212;
+        opacity: 0;
+    }
+
+    .close-menu {
+        position: fixed;
+        margin: 1em;
+        font-size: 24px;
+        color: #fff;
+        z-index: 1;
+
+    }
+
+    .nav {
+        position: absolute;
+        left: 21%;
+        margin-top: 8%;
+    }
+
+    .nav ul {
+        list-style: none;
+    }
+
+    .main-menu-item {
+        padding-top: 30px;
+    }
+
+    .main-menu-item a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: lighter;
+    }
+
+    .submenu-item a {
+        color: grey;
+    }
+
+    .submenu li {
+        margin: 20px 0;
+    }
+
+    a svg {
+        position: relative;
+        height: 16px;
+    }
+
+    .submenu {
+        display: none;
+    }
+
+    .contact {
+        color: #fff;
+        position: absolute;
+        bottom: 70px;
+        right: 24%;
+    }
+
+    .contact svg {
+        position: relative;
+        top: 4px;
+        height: 20px;
+        width: 20px;
+        fill: grey;
+        opacity: 0.5;
+    }
+
+    .contact p {
+        font-weight: lighter;
+        color: grey;
+        font-family: 'Helvetica';
+
+    }
+
+    .media {
+        position: absolute;
+        bottom: 70px;
+        left: 22%;
+    }
+
+    .media ul {
+        list-style: none;
+    }
+
+    .media ul li {
+        display: inline-block;
+        color: grey;
+        font-weight: lighter;
+        padding-right: 10px;
+    }
+
+
+    @media(max-width:968px) {
+        h1 {
+            font-size: 20px;
+        }
+
+        .nav {
+            margin-top: 20px;
+        }
+
+        .contact {
+            display: none;
+        }
+    }
+</style>
+
+<body>
+    <div class="wrapper">
+        <div class="hero-section">
+            <h1>Dropdown Menu Example</h1>
+
+            <div class="menu-btn">
+                <img src="menu.svg"></img>
+            </div>
+        </div>
+
+        <div class="menu">
+            <div class="close-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172"
+                    style=" fill:#000000;">
+                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                        stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                        font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                        style="mix-blend-mode: normal">
+                        <path d="M0,172v-172h172v172z" fill="none"></path>
+                        <g fill="#ecf0f1">
+                            <path
+                                d="M26.5525,21.6075l-4.945,4.945l59.4475,59.4475l-59.4475,59.4475l4.945,4.945l59.4475,-59.4475l59.4475,59.4475l4.945,-4.945l-59.4475,-59.4475l59.4475,-59.4475l-4.945,-4.945l-59.4475,59.4475z">
+                            </path>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+
+            <div class="nav">
+                <ul class="main-menu">
+                    <li class="main-menu-item">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="main-menu-item">
+                        <a href="#">Our Products &nbsp;<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                                width="24" height="24" viewBox="0 0 172 172" style=" fill:#000000;">
+                                <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                                    stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray=""
+                                    stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none"
+                                    text-anchor="none" style="mix-blend-mode: normal">
+                                    <path d="M0,172v-172h172v172z" fill="none"></path>
+                                    <g fill="#ecf0f1">
+                                        <path
+                                            d="M82.56,30.96v51.6h-51.6v6.88h51.6v51.6h6.88v-51.6h51.6v-6.88h-51.6v-51.6z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg></a>
+                        <ul class="submenu">
+                            <li class="submenu-item">
+                                <a href="#" Fonts</a>
+                            </li>
+                            <li class="submenu-item">
+                                <a href="#">Mockups</a>
+                            </li>
+                            <li class="submenu-item">
+                                <a href="#">Presets</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="main-menu-item">
+                        <a href="#">Portfolio &nbsp;<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24"
+                                height="24" viewBox="0 0 172 172" style=" fill:#000000;">
+                                <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                                    stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray=""
+                                    stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none"
+                                    text-anchor="none" style="mix-blend-mode: normal">
+                                    <path d="M0,172v-172h172v172z" fill="none"></path>
+                                    <g fill="#ecf0f1">
+                                        <path
+                                            d="M82.56,30.96v51.6h-51.6v6.88h51.6v51.6h6.88v-51.6h51.6v-6.88h-51.6v-51.6z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg></a>
+                        <ul class="submenu" id="portfolio-menu">
+                            <li class="submenu-item">
+                                <a href="#"> Timeless flow </a>
+                            </li>
+                            <li class="submenu-item">
+                                <a href="#">Foretime</a>
+                            </li>
+                            <li class="submenu-item">
+                                <a href="#">Never again</a>
+                            </li>
+                            <li class="submenu-item">
+                                <a href="#">Departure</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="main-menu-item">
+                        <a href="#">Our Story </a>
+                    </li>
+                    <li class="main-menu-item">
+                        <a href="#">Contact &nbsp;<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24"
+                                height="24" viewBox="0 0 172 172" style=" fill:#000000;">
+                                <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                                    stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray=""
+                                    stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none"
+                                    text-anchor="none" style="mix-blend-mode: normal">
+                                    <path d="M0,172v-172h172v172z" fill="none"></path>
+                                    <g fill="#ecf0f1">
+                                        <path
+                                            d="M82.56,30.96v51.6h-51.6v6.88h51.6v51.6h6.88v-51.6h51.6v-6.88h-51.6v-51.6z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg></a>
+                        <ul class="submenu">
+                            <li class="submenu-item">
+                                <a href="#">Call now</a>
+                            </li>
+                            <li class="submenu-item">
+                                <a href="#">Mail us</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="contact">
+                <p class="call">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172"
+                        style=" fill:#000000;">
+                        <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                            style="mix-blend-mode: normal">
+                            <path d="M0,172v-172h172v172z" fill="none"></path>
+                            <g fill="#ecf0f1">
+                                <path
+                                    d="M133.98531,10.33344c-2.67406,0.14781 -11.05906,0.40313 -23.82469,6.38281c-12.76563,5.96625 -30.28813,17.57625 -53.07813,40.36625c-22.79,22.79 -34.41344,40.32594 -40.37969,53.09156c-5.96625,12.75219 -6.235,21.13719 -6.38281,23.81125v0.17469c0,3.09063 1.55875,5.20031 3.35938,7.56531c1.80062,2.35156 4.09844,4.75687 6.50375,7.06812c4.82406,4.6225 9.98406,8.76125 12.34906,10.44094c5.44219,3.89687 11.825,2.98312 14.7275,-1.10188c2.08281,-2.9025 17.87188,-26.88844 20.23688,-30.79875c0,0 -0.01344,0 0,0c2.40531,-3.64156 1.43781,-7.96844 -0.7525,-11.98625c-1.65281,-3.02344 -6.30219,-11.11281 -7.65938,-13.46437c1.1825,-1.80063 5.75125,-8.50594 20.02188,-22.77656l0.01344,-0.01344v-0.01344c14.32438,-14.56625 21.00281,-18.92 22.73625,-20.00844c2.29781,1.31688 10.25281,5.89906 13.38375,7.61906c3.81625,2.28437 8.22375,3.02344 11.89219,0.92719l0.04031,-0.01344l0.02688,-0.02688c1.84094,-1.10187 8.68062,-5.54969 15.695,-10.15875c3.50719,-2.29781 6.9875,-4.59562 9.75562,-6.42312c2.72781,-1.8275 4.56875,-3.05031 5.4825,-3.73563c4.07156,-2.9025 4.99875,-9.27187 1.10188,-14.7275c-1.66625,-2.32469 -5.79156,-7.57875 -10.4275,-12.44312c-2.31125,-2.43219 -4.73,-4.74344 -7.10844,-6.54406c-2.365,-1.78719 -4.54187,-3.37281 -7.71312,-3.21156zM134.33469,17.2c-0.3225,0.01344 1.34375,0.41656 3.21156,1.8275c1.88125,1.42438 4.11188,3.53406 6.27531,5.805c4.32687,4.54188 8.46562,9.82281 9.80937,11.70406c2.13656,2.98312 0.645,5.02562 0.51063,5.11969l-0.04031,0.04031l-0.04031,0.01344c-0.29562,0.24188 -2.4725,1.72 -5.22719,3.5475c-2.74125,1.8275 -6.20812,4.12531 -9.71531,6.40969c-6.96062,4.56875 -14.17656,9.245 -15.38594,9.98406h-0.01344c-0.5375,0.29563 -2.74125,0.44344 -4.945,-0.87344l-0.05375,-0.04031l-0.06719,-0.02687c-3.14438,-1.72 -15.29188,-8.69406 -15.29188,-8.69406l-1.70656,-0.98094l-1.70656,0.98094c0,0 -8.98969,5.21375 -25.70594,22.22562c0,0 0,0.01344 -0.01344,0.01344c0,0 0,0 0,0.01344c-16.70281,16.68937 -22.17187,25.59844 -22.17187,25.59844l-1.04813,1.73344l1.00781,1.76031c0,0 6.97406,12.1475 8.68062,15.29188c1.42438,2.60687 1.04813,4.90469 1.06156,4.86437l-0.04031,0.06719l-0.04031,0.08063c-1.37063,2.28437 -19.09469,29.17281 -20.02188,30.47625c-0.09406,0.13437 -2.15,1.62594 -5.11969,-0.51063c-1.85438,-1.31687 -7.08156,-5.46906 -11.59656,-9.79594c-2.24406,-2.17687 -4.35375,-4.39406 -5.79156,-6.28875c-1.42437,-1.88125 -1.92156,-3.57437 -1.92156,-3.37281c0.14781,-3.07719 0.22844,-9.37937 5.71094,-21.08344c5.53625,-11.85187 16.64906,-28.78312 39.00906,-51.14312c22.36,-22.36 39.27781,-33.47281 51.12969,-39.00906c11.85187,-5.53625 18.20781,-5.57656 21.25812,-5.73781z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                    &nbsp; +77 233 233 077
+                </p>
+                <p class="mail">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172"
+                        style=" fill:#000000;">
+                        <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                            stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                            font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                            style="mix-blend-mode: normal">
+                            <path d="M0,172v-172h172v172z" fill="none"></path>
+                            <g fill="#ecf0f1">
+                                <path
+                                    d="M0,24.08v123.84h172v-123.84zM6.88,30.96h158.24v110.08h-158.24zM13.76,47.87781v8.11625l72.24,40.94406l72.24,-40.94406v-8.11625l-72.24,40.94406z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                    &nbsp; example@domain.com
+                </p>
+            </div>
+
+            <div class="media">
+                <ul>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                    <li>Twitter</li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+
+            let tl = gsap.timeline({ paused: true, reversed: true, defaults: { ease: 'Expo.easeInOut' } })
+
+            tl.to('.menu', 0.8, {
+                autoAlpha: 1
+            })
+            tl.from('.main-menu-item', 0.8, {opacity: 0, stagger: 0.1, y:20}, '<70%')
+            tl.from('.media li', 0.8, {opacity: 0, stagger: 0.1, y:20}, '<20%')
+            tl.from('.contact > *', 0.8, {opacity: 0, stagger: 0.1, y:20}, '<')
+
+            $('ul.main-menu li').click(onMenuItemClick)
+    
+            $('.menu-btn').click(playMenuAnimation)
+            $('.close-menu').click( playMenuAnimation)
+    
+            function playMenuAnimation() {
+                if (tl.reversed()) {
+                    tl.play()
+                } else {
+                    tl.reverse()
+                }
+            }
+    
+            function onMenuItemClick(e) {
+                e.preventDefault()
+    
+                if ($(this).siblings('li').find('ul.submenu:visible').length) {
+                    $('ul.submenu').slideUp('normal')
+                }
+    
+                $(this).find('ul.submenu').slideToggle('normal')
+            }
+        })
+       
+    </script>
+</body>
+
+</html>
