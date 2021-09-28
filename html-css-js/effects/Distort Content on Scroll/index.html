@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=div, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@300;400&display=swap" rel="stylesheet"> 
+</head>
+
+<style>
+    html, body{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100vh;
+        background: #161616;
+        font-family: 'Stick No Bills', sans-serif;
+        color: white;
+    }
+    .page-title{
+      text-align: center;
+      letter-spacing: 1.5em;
+    }
+    .page-title > h1{
+        font-size: 64px !important;
+    }
+    .content{
+        width: 70%;
+        margin: 160px auto;
+    }
+    section{
+        transition: transform 0.35s;
+        will-change: transform;
+
+    }
+    h1{
+        font-size: 48px;
+        margin-bottom: 10px;
+        font-weight: 400;
+    }
+    p{
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.4);
+    }
+    img{
+        width: 80%;
+        margin: auto auto;
+
+
+    }
+    div{
+        margin-bottom: 80px;
+    }
+</style>
+<body>
+    <div class="content">
+        <section class="distort">
+            <div class="page-title">
+                <h1>
+                 Futu.re 
+                </h1>
+            </div>
+            <div>
+                <img src="1.jpg" alt="">
+                <h1>Futu.re</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, qui. Quisquam aliquam quibusdam vitae nihil? Nihil, nulla enim? Minima corporis repellat nulla impedit soluta explicabo eveniet adipisci fugiat animi ad doloremque omnis quos at laudantium ratione, amet quibusdam iusto blanditiis, itaque, quia officiis veniam provident asperiores deleniti! Nobis doloribus architecto distinctio modi repellat excepturi, dolor corrupti minima nesciunt fuga qui voluptas aliquam, quibusdam ad similique temporibus adipisci et totam cum? Excepturi totam quidem qui! Aliquid eveniet ratione quam non voluptates rerum expedita, officia quisquam magni accusantium corrupti fugiat quibusdam fugit assumenda dolores facere libero! Placeat accusantium cupiditate qui exercitationem ipsam!</p>
+
+            </div>
+            <div>
+                <img src="2.jpg" alt="">
+                <h1>Futu.re</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis suscipit culpa nisi quas eveniet libero, repellendus quod autem enim aperiam assumenda excepturi incidunt facilis quasi, alias sed odio qui. Non accusamus consequatur ea quasi eos fugiat dolor suscipit, officiis nesciunt placeat minima dolorum similique id architecto qui mollitia ex magni aut, voluptatem, ut repellendus maxime omnis doloremque at. Iusto deserunt doloremque earum cum in eum quia libero numquam beatae itaque! Debitis nihil voluptatem facilis blanditiis error, quaerat totam natus tempore!</p>
+                
+            </div>
+            <div>
+                <img src="3.jpg" alt="">
+                <h1>Futu.re</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto illo eius sapiente quas nobis pariatur blanditiis, enim at architecto, itaque adipisci iure cum, quidem accusamus voluptate et! Suscipit laborum voluptas esse et accusamus placeat deserunt pariatur neque tempore possimus! Rem eos provident pariatur. Facilis, error necessitatibus! Nesciunt illo corrupti quis voluptate quo iste cupiditate at laboriosam similique ut dicta ducimus alias voluptas, inventore sit quam perferendis maiores, voluptates, delectus soluta minus! Minima sit exercitationem et quaerat porro doloremque cupiditate dolorum fugiat odio at. Ea dolor et voluptate sed eligendi quasi, culpa est quae quaerat quo illum veritatis natus vero ullam accusantium perspiciatis ratione. Voluptatibus, excepturi. Excepturi commodi sequi non nostrum sit consectetur magni ipsa illo dolorum incidunt. Voluptas, maxime sint odio tenetur sed rerum unde autem velit tempora enim, minus perspiciatis magnam expedita laborum quaerat aliquam? Ratione accusamus consequuntur fugiat accusantium veniam temporibus sunt, culpa mollitia soluta nobis cum tenetur esse molestias eaque. Dignissimos eaque labore modi debitis, ad accusantium tempore! Aliquam nam nemo quaerat veritatis velit mollitia delectus expedita esse possimus, earum a quasi debitis nihil repudiandae corrupti voluptate fuga incidunt suscipit voluptatum facilis maiores! Praesentium corporis odio omnis dolorum, saepe, laboriosam veniam sunt expedita aspernatur voluptas, ut rem!</p>
+                
+            </div>
+        </section>
+    </div>
+    <script type="text/javascript">
+        const content = document.querySelector('section')
+        
+        let currentPos = window.pageYOffset
+        let i = 0;
+        const callDistort = function() {
+            const newPos = window.pageYOffset
+            const diff = newPos - currentPos
+            const speed = diff * 0.35
+
+            content.style.transform = `skewY(${speed}deg)`
+
+            currentPos = newPos
+            i++;
+            console.log(i)
+            requestAnimationFrame(callDistort)
+        }
+
+        callDistort()
+    </script>
+</body>
+</html>
