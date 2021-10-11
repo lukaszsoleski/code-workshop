@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        font-family: 'Poppins', sans-serif;
+    }
+    header{
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 1005px;
+        height: 80px;
+
+    }
+    header h4{
+        position: absolute;
+        left: 10%;
+        bottom: 1rem;
+        font-size: 1.6rem;
+    }
+
+
+    .intro{
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #161616;
+        transition: cubic-bezier(0.785, 0.135, 0.15, 1) 1s;
+    }
+    .logo-header{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+    }
+
+    .logo{
+        position: relative;
+        display: inline-block;
+        bottom: -20px;
+        opacity: 0;
+        transform: skew(-15deg,80deg);
+    }
+    .logo.active{
+        bottom: 0;
+        opacity: 1;
+        transition: ease-out 0.5s;
+        transform: skew(0);
+    }
+    .logo.fade {
+        bottom: 50px;
+        opacity: 0;
+        transition: ease-in 0.8s;
+        transform: skew(0);
+
+    }
+</style>
+<body>
+
+    <div class="intro">
+        <h1 class="logo-header">
+            <span class="logo">Lets</span><span class="logo">GO.</span>
+          
+        </h1>
+    </div>
+
+    <header>
+        <h4>LETSGO.</h4>
+    </header>
+    <script type="text/javascript">
+        let intro = document.querySelector('.intro')
+        let logo = document.querySelector('.logo-header')
+        let logoSpan = document.querySelectorAll('.logo')
+
+
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout( () => {
+                logoSpan.forEach((span, idx)=> {
+                    setTimeout(() => {
+                        span.classList.add('active')
+                    }, (idx + 1) * 300)
+                })
+                
+                setTimeout(() => {
+                    logoSpan.forEach((span, idx) => {
+                        setTimeout(() => {
+                            span.classList.remove('active')
+                            span.classList.add('fade')
+                        }, (idx + 1) * 300)
+                    })
+    
+                },1000)
+             
+                setTimeout(() => {
+                    intro.style.top = '-100vh'
+                }, 1800)
+
+            })
+        
+        })
+            
+    
+    </script>
+</body>
+</html>
